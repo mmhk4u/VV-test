@@ -1,0 +1,30 @@
+package practiceTestCases;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+public class FindAllLinks {
+public static void main(String[] args) {
+WebDriver driver = new FirefoxDriver();
+driver.get("http://www.lourencodemonaco.com.br/vvtest/");
+java.util.List<WebElement> links = driver.findElements(By.tagName("Pesquisa – QA"));
+System.out.println(links.size());
+for (int i = 1; i<=links.size(); i=i+1)
+{
+System.out.println(links.get(i).getText());
+}
+driver.find_element_by_id('Nome').send_keys(input1)
+driver.find_element_by_id('Sobrenome').send_keys(input2)
+driver.find_element_by_id('Email').send_keys(input4)
+driver.find_element_by_id('Confirmação de emai').send_keys(input5)
+driver.find_element_by_id('Qual linguagem de programação te interessa').send_keys(input6)
+driver.find_element_by_id('Escreva resumidamente um plano para sua carreira').send_keys(input6)
+Select dropdown = new Select(driver.findElement(By.id("Quanto tempo você está na área de QA? *")));
+dropdown.selectByIndex(1);
+Select dropdown = new Select(driver.findElement(By.id("O que te atraiu na área? **")));
+dropdown.selectByIndex(1);
+ List<WebElement>radioButton = driver.findElements(By.tagName("O que mais você precisa melhorar? "));
+  driver.findElement(By.id("Técnico")).click();
+  driver.findElements(By.className("ENVIAR")).get(0).click();
+}
+}
